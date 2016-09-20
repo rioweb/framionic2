@@ -68,3 +68,7 @@
 .menu-animated {
   @include transition-transform($menu-animation-speed ease);
 }
+
+@import
+  "path_to_bower_components/ionic/scss/ionic",
+  "path_to_bower_components/ionic-filter-bar/scss/ionic.filter.bar";

@@ -1,4 +1,4 @@
-<ion-view view-title="Marcas">
+<!--<ion-view view-title="Marcas">
   <ion-header-bar class="bar-positive">
     <div class="buttons">
         <button class="button button-icon ion-android-search" 
@@ -17,4 +17,20 @@
       <button class="button icon-left ion-star button-positive">Favorites</button>
     </div>
 
+</ion-view>
+-->
+<ion-view view-title="Marcas">
+  <ion-content>
+     <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+         {{playlist.title}}
+       </ion-item>
+     </ion-list>
+   </ion-content>
+     <div class="bar bar-footer">
+    <div class="buttons">
+        <button class="button button-icon ion-android-search" 
+                ng-click="showFilterBar()"></button>
+    </div>
+    </div>
 </ion-view>

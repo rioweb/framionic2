@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers','jett.ionic.filter.bar
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$ionicFilterBarConfigProvider) {
   $stateProvider
 
     .state('app', {

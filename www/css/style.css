@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 .menux{
-	background-image: url(/img/menu.jpg);
+	background-image: url(/img/menu.jpg)!important;
 	background-position: cover;
 	background-repeat: no-repeat;
 }

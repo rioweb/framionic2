@@ -55,15 +55,25 @@ angular.module('starter.controllers', [])
 
   $scope.filterBarInstance;
 
+
+
   $scope.showFilterBar = function () {
       filterBarInstance = $ionicFilterBar.show({
         items: $scope.playlists,
-        update: function (filteredItems) {
+        update: function (filteredItems, filterText) {
           $scope.playlists = filteredItems;
-        },
-        filterProperties: 'title'
+          if (filterText) {
+            console.log(filterText);
+          }
+        }
       });
     };
+
+     $scope.refreshItems = function () {
+      if (filterBarInstance) {
+        filterBarInstance();
+     } 
+   };
 
 
 })
