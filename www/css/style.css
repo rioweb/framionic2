@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+.menux{
+	background-image: url(/img/menu.jpg);
+	background-position: cover;
+	background-repeat: no-repeat;
+}
+.close, .item-complex .item-content, .item-radio .item-content{
+	background-color:#f78222!important;
+	color: white;
+}

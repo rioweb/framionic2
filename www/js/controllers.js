@@ -41,7 +41,9 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope,$ionicFilterBar) {
+  
+
   $scope.playlists = [
     { title: 'AlfaRomeo', id: 1},
     { title: 'Audi', id: 2},
@@ -50,6 +52,20 @@ angular.module('starter.controllers', [])
     { title: 'Ford', id: 5},
     { title: 'Volkswagen', id: 6}
   ];
+
+  $scope.filterBarInstance;
+
+  $scope.showFilterBar = function () {
+      filterBarInstance = $ionicFilterBar.show({
+        items: $scope.playlists,
+        update: function (filteredItems) {
+          $scope.playlists = filteredItems;
+        },
+        filterProperties: 'title'
+      });
+    };
+
+
 })
 
 .controller('PlaylistCtrl',['$scope', '$stateParams', function($scope, $stateParams) {
