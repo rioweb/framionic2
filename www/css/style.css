@@ -8,3 +8,10 @@
 	background-color:#f78222!important;
 	color: white;
 }
+.item-complex .item-content:hover, .item-radio .item-content :hover {
+	background-color: #f9ad87!important;
+	border-color: red;
+}
+.links{
+	color: black;
+}

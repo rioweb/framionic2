@@ -1,5 +1,8 @@
 angular.module('starter.controllers', [])
+.controller('HomeCtrl',['$scope', function($scope) {
 
+
+}])
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -41,21 +44,22 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope,$ionicFilterBar) {
+.controller('MarcasCtrl', function($scope,$ionicFilterBar) {
   
 
+
   $scope.playlists = [
-    { title: 'AlfaRomeo', id: 1},
-    { title: 'Audi', id: 2},
-    { title: 'Chevrolet', id: 3},
-    { title: 'Fiat', id: 4},
-    { title: 'Ford', id: 5},
-    { title: 'Volkswagen', id: 6}
+    { title: 'AlfaRomeo', type:'car', id: 1},
+    { title: 'Audi', type:'car', id: 2},
+    { title: 'Chevrolet', type:'car', id: 3},
+    { title: 'Fiat', type:'truck',id: 4},
+    { title: 'Ford', type:'truck', id: 5},
+    { title: 'Volkswagen',type:'truck', id: 6}
   ];
 
   $scope.filterBarInstance;
 
-
+  
 
   $scope.showFilterBar = function () {
       filterBarInstance = $ionicFilterBar.show({
@@ -75,9 +79,8 @@ angular.module('starter.controllers', [])
      } 
    };
 
-
+  
 })
-
 .controller('PlaylistCtrl',['$scope', '$stateParams', function($scope, $stateParams) {
     
     $scope.models=[
