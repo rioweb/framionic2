@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 .menux{
-	background-image: url(/img/menu.jpg)!important;
+	background: url("../resources/img/bg.png")!important;
 	background-position: cover;
 	background-repeat: no-repeat;
 }
@@ -14,4 +14,8 @@
 }
 .links{
 	color: black;
+}
+.catal{
+	text-align: center;
+	font-size: 20px;
 }

@@ -1,11 +1,10 @@
 <ion-view view-title="Modelos">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="mod in modelos.names track by $index" href="#/app/marcas/{{number}}">
+      <ion-item ng-repeat="mod in modelos.names track by $index" href="#/app/audi">
           
           <div class="row">
               <div class="col col-50"> {{mod.modelo}} </div> 
-              <div class="col col-50"> {{mod.codigo}} </div> 
           </div>
       </ion-item>
     </ion-list>

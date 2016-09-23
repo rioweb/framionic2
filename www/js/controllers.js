@@ -91,9 +91,9 @@ angular.module('starter.controllers', [])
          {"modelo":"Alfa asdasd ", "codigo":"6"},
      ] },{
      "names":[
-         {"modelo":"GT 3.2 JTS V6 - Mot.939A.000-3195cc-191KW/260HP", "codigo":"CA5612"},
-         {"modelo":"MiTo 1.4 TB QV - Mot.955A8.000-125KW/170HP", "codigo":"CA9943"},
-         {"modelo":"Spider 3.0 V6 - Mot.AR16101-2959cc-141KW/192HP", "codigo":"CA5612"},
+         {"modelo":"GT 3.2 JTS V6 - Mot.939A.000-3195cc-191KW/260HP", "codigo":"CA5612","link":"audi1.html"},
+         {"modelo":"MiTo 1.4 TB QV - Mot.955A8.000-125KW/170HP", "codigo":"CA9943","link":"audi1.html"},
+         {"modelo":"Spider 3.0 V6 - Mot.AR16101-2959cc-141KW/192HP", "codigo":"CA5612","link":"audi1.html"},
      ]
     },
     {

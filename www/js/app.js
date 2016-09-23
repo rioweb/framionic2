@@ -31,16 +31,50 @@ angular.module('starter', ['ionic', 'starter.controllers','jett.ionic.filter.bar
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-    /*
-    .state('app.home', {
-    url: '/home',
+  .state('app.audi', {
+    url: '/audi',
     views: {
       'menuContent': {
-        templateUrl: 'templates/home.html',
-        controller:'MarcasCtrl'
+        templateUrl: 'templates/audi.html'
       }
     }
-  })*/
+  })
+  .state('app.audi2', {
+    url: '/audi2',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/audi2.html'
+      }
+    }
+  }).state('app.audi3', {
+    url: '/audi3',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/audi3.html'
+      }
+    }
+  }).state('app.alfa1', {
+    url: '/alfa1',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/alfa1.html'
+      }
+    }
+  }).state('app.alfa2', {
+    url: '/alfa2',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/alfa2.html'
+      }
+    }
+  }).state('app.alfa3', {
+    url: '/alfa3',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/alfa3.html'
+      }
+    }
+  })
   .state('app.search', {
     url: '/search',
     views: {
@@ -49,7 +83,6 @@ angular.module('starter', ['ionic', 'starter.controllers','jett.ionic.filter.bar
       }
     }
   })
-
   .state('app.browse', {
       url: '/browse',
       views: {
