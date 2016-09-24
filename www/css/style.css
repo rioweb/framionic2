@@ -1,9 +1,31 @@
-/* Empty. Add your own CSS if you like */
+/* Empty. Add your own CSS if you like 
 .menux{
 	background: url("../resources/img/bg.png")!important;
 	background-position: cover;
 	background-repeat: no-repeat;
+}*/
+@media screen and (max-width: 1199px) {
+   .menu.menu-left {
+     background-image: url('../img/bg-header-fram.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 50%;
+     background-attachment: fixed;
+   }
 }
+
+@media screen and (max-width: 767px) {
+   .menu.menu-left {
+     background-image: url('../img/bg-header-fram.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: 50%;
+     background-attachment: fixed;
+   }
+}
+
+
+
 .close, .item-complex .item-content, .item-radio .item-content{
 	background-color:#f78222!important;
 	color: white;

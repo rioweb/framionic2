@@ -1,8 +1,34 @@
+
 angular.module('starter.controllers', [])
 .controller('HomeCtrl',['$scope', function($scope) {
 
 
 }])
+.controller("ExampleController", function($scope, $cordovaSQLite) {
+ 
+    $scope.insert = function(firstname, lastname) {
+        var query = "INSERT INTO people (firstname, lastname) VALUES (?,?)";
+        $cordovaSQLite.execute(db, query, [firstname, lastname]).then(function(res) {
+            console.log("INSERT ID -> " + res.insertId);
+        }, function (err) {
+            console.error(err);
+        });
+    }
+ 
+    $scope.select = function(lastname) {
+        var query = "SELECT firstname, lastname FROM people WHERE lastname = ?";
+        $cordovaSQLite.execute(db, query, [lastname]).then(function(res) {
+            if(res.rows.length > 0) {
+                console.log("SELECTED -> " + res.rows.item(0).firstname + " " + res.rows.item(0).lastname);
+            } else {
+                console.log("No results found");
+            }
+        }, function (err) {
+            console.error(err);
+        });
+    }
+ 
+})
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -98,9 +124,9 @@ angular.module('starter.controllers', [])
     },
     {
     "names":[
-         {"modelo":"A1 1.4T Fsi Sline - Mot.CAVA-1390cc-136KW/185HP", "codigo":"CA9711"},
-         {"modelo":"A3 2.0 Fsi - Mot.BVZ-1984cc-110KW/150HP", "codigo":"CA9800"},
-         {"modelo":"Q7 4.2 V8 Fsi - Mot.BNS-4163cc-246KW/335HP", "codigo":"CA10236"},
+         {"modelo":"A1 1.4T Fsi Sline - Mot.CAVA-1390cc-136KW/185HP", "codigo":"CA9711","link":"audi1.html"},
+         {"modelo":"A3 2.0 Fsi - Mot.BVZ-1984cc-110KW/150HP", "codigo":"CA9800", "link":"audi2.html"},
+         {"modelo":"Q7 4.2 V8 Fsi - Mot.BNS-4163cc-246KW/335HP", "codigo":"CA10236","link":"audi3.html"},
      ]
     }  
     ];

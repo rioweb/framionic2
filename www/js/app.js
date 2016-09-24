@@ -6,7 +6,7 @@ var db = null;
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers','jett.ionic.filter.bar','ngCordova'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $cordovaSQLite) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,6 +19,17 @@ angular.module('starter', ['ionic', 'starter.controllers','jett.ionic.filter.bar
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    if (window.cordova) {
+      db = $cordovaSQLite.openDB({ name: "my.db" }); //device
+     console.log("Android");
+    }else{
+      db = window.openDatabase("my.db", '1', 'my', 1024 * 1024 * 100); // browser
+      console.log("browser");
+
+    };
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people (id integer primary key, firstname text, lastname text)");
+    
   });
 })
 
@@ -43,7 +54,8 @@ angular.module('starter', ['ionic', 'starter.controllers','jett.ionic.filter.bar
     url: '/audi2',
     views: {
       'menuContent': {
-        templateUrl: 'templates/audi2.html'
+        templateUrl: 'templates/audi2.html',
+        controller: 'ExampleController'
       }
     }
   }).state('app.audi3', {
